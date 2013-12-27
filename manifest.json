@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Links Extractor",
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["js/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+ "permissions": [
+    "history",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "notifications",
+    "http://*/*",
+    "https://*/*",
+    "idle",
+    "activeTab"
+  ],
+  "icons": {
+           "16": "img/icon.png",
+           "48": "img/icon.png",
+          "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_title": "Extract links",
+    "default_popup": "popup.html",
+    "default_icon": "img/icon.png"
+  }
+}

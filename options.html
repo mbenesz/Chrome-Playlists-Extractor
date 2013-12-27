@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <script src="js/jquery.js"></script>
+      <script src="js/config.js"></script>
+      <script src="js/options.js"></script>
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" />
+      <link rel="stylesheet" href="css/style.css" type="text/css" />
+   </head>
+   <body>
+   
+     <div class="container">
+       
+      <form role="form" id="mainForm">
+      
+        <h1>Options</h1>
+        
+        <hr />
+      
+        <div class="form-group">
+          <label for="keywords">Keywords</label>
+          <textarea style="width: 100%;" rows="10" class="form-control" name="keywords" id="keywords" placeholder="Enter keywords..."></textarea>
+          <p class="help-block">Additional options.</p>
+          <p class="help-block">
+            Or upload your text file: <br /><br />
+            <label><input name="upl_type" value="append" type="radio" /> Append</label>
+            <label><input name="upl_type" value="replace" type="radio" /> Replace</label>
+            <br />
+            <input type="file" id="upl" />
+          </p>
+        </div>
+
+        <hr />
+        
+        <div class="form-group">
+          <label> <input type="checkbox" name="inc_numbers" id="inc_numbers" /> Include numbers</label>
+        </div>
+        
+        <hr />
+        
+        <div class="form-group">
+          <label> <input type="checkbox" name="inc_ponc" id="inc_ponc" /> Include words</label>
+          <input type="text" class="form-control" name="ponc_kws" id="ponc_kws" value="" />
+        </div>
+        
+        <hr />
+        
+        <div class="form-group">
+          <label for="phrases_num">Maximum<span></span></label>
+          0 <input type="range" min="0" max="20" step="1" style="" class="form-control" name="phrases_num" id="phrases_num" /> 20
+        </div>
+        
+        <hr />
+        
+        <div class="form-group">
+          <label for="min_chars">Minimum <span></span></label>
+          0 <input type="range" min="0" max="100" step="5" style="" class="form-control" name="min_chars" id="min_chars" /> 100
+        </div>
+        
+        <hr />
+        
+        <button class="btn btn-primary" id="save_btn">
+          <i class="icon-ok icon-white"></i> Save
+        </button>
+        
+      </form>
+
+     </div>
+     
+   </body>
+</html>
